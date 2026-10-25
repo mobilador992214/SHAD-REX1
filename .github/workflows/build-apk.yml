@@ -1,17 +1,17 @@
 name: Build SHADORE APK
 
 on:
-workflow_dispatch:
+ workflow_dispatch:
 
 permissions:
-contents: read
+ contents: read
 
 jobs:
-build:
-runs-on: ubuntu-latest
+ build:
+  runs-on: ubuntu-latest
 
-```
-steps:
+
+  steps:
   - name: Checkout source
     uses: actions/checkout@v4
 
@@ -42,4 +42,4 @@ steps:
       name: SHADORE-debug-APK
       path: '**/build/outputs/apk/debug/*.apk'
       if-no-files-found: error
-```
+
